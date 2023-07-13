@@ -8,8 +8,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 
-public class ClientController {
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.URI;
+import java.net.URL;
+
+public class ClientController extends Thread {
     public TextField txtMessage;
     public ScrollPane txtArea;
     public VBox messageArea;
@@ -25,6 +32,21 @@ public class ClientController {
     public ImageView emoji9;
     public ImageView emoji5;
     public ImageView emoji10;
+
+    private Socket socket;
+    private PrintWriter printWriter;
+    private BufferedReader bufferedReader;
+    private FileChooser fileChooser;
+    private URL url;
+
+    public void initialize(){
+        this.txtClientName.setText(LoginController.clientName);
+        connectSocket();
+        emojiPane.setVisible(false);
+    }
+
+    private void connectSocket() {
+    }
 
     public void sendOnAction(ActionEvent actionEvent) {
     }
