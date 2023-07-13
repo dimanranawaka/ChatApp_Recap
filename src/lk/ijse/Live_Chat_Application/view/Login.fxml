@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.Live_Chat_Application.controller.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="loginPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #606C5D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Live_Chat_Application.controller.LoginController">
+   <children>
+      <Label layoutX="305.0" layoutY="87.0" text="JavaMessenger" textFill="WHITE">
+         <font>
+            <Font name="Californian FB Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="238.0" fitWidth="212.0" layoutX="70.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="415.0" layoutY="215.0" text="User Name :" textFill="WHITE">
+         <font>
+            <Font name="Californian FB Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="415.0" layoutY="252.0" prefHeight="31.0" prefWidth="222.0" promptText="Username" />
+      <Button fx:id="btnSend" layoutX="477.0" layoutY="351.0" mnemonicParsing="false" onAction="#loadClientPageOnAction" prefHeight="38.0" prefWidth="99.0" style="-fx-background-color: #3CCF4E;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
