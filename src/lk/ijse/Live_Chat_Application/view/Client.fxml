@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #7D7463;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Live_Chat_Application.controller.ClientController">
    <children>
       <Label layoutX="350.0" layoutY="37.0" text="Chat Room" textFill="WHITE">
@@ -41,12 +40,74 @@
                   </HBox>
                </content>
             </ScrollPane>
-            <Label fx:id="txtClientName" layoutX="90.0" layoutY="14.0" text="Dreed">
+            <Label fx:id="txtClientName" layoutX="78.0" layoutY="12.0" text="Dreed">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="36.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="36.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon.png" />
+               </image></ImageView>
+            <ImageView fitHeight="28.0" fitWidth="38.0" layoutX="514.0" layoutY="428.0" onMouseClicked="#openFileChoser" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/3342176.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="emojiPane" layoutX="-29.0" layoutY="299.0" prefHeight="122.0" prefWidth="331.0">
+               <children>
+                  <ImageView fx:id="emoji1" fitHeight="35.0" fitWidth="44.0" layoutX="70.0" layoutY="15.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji6" fitHeight="35.0" fitWidth="44.0" layoutX="70.0" layoutY="65.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/kiss1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji2" fitHeight="35.0" fitWidth="44.0" layoutX="123.0" layoutY="15.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/love.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji7" fitHeight="35.0" fitWidth="44.0" layoutX="122.0" layoutY="65.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/mask.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji3" fitHeight="35.0" fitWidth="44.0" layoutX="174.0" layoutY="15.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/angree.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji8" fitHeight="35.0" fitWidth="44.0" layoutX="172.0" layoutY="65.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/pain.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji4" fitHeight="35.0" fitWidth="44.0" layoutX="226.0" layoutY="15.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/care.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji9" fitHeight="35.0" fitWidth="44.0" layoutX="226.0" layoutY="65.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/wow1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji5" fitHeight="35.0" fitWidth="44.0" layoutX="276.0" layoutY="15.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/haha.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="emoji10" fitHeight="35.0" fitWidth="44.0" layoutX="276.0" layoutY="65.0" onMouseClicked="#sendEmojiOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/wow.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
