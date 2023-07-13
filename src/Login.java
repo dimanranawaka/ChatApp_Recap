@@ -13,7 +13,7 @@ public class Login extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("lk/ijse/Live_Chat_Application/controller/LoginController.java"))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("lk/ijse/Live_Chat_Application/view/Login.fxml"))));
         primaryStage.centerOnScreen();
         primaryStage.show();
     }
