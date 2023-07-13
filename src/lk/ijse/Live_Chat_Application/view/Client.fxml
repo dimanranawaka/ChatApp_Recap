@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.Live_Chat_Application.controller.ClientController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #7D7463;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Live_Chat_Application.controller.ClientController">
+   <children>
+      <Label layoutX="350.0" layoutY="37.0" text="Chat Room" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <AnchorPane layoutX="55.0" layoutY="78.0" prefHeight="478.0" prefWidth="690.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtMessage" layoutX="90.0" layoutY="424.0" prefHeight="35.0" prefWidth="459.0" promptText="Type Message...." />
+            <Button layoutX="558.0" layoutY="423.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #3CCF4E;" text="Send" textFill="WHITE" />
+            <ImageView fitHeight="28.0" fitWidth="34.0" layoutX="43.0" layoutY="428.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/happy.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="txtArea" layoutX="24.0" layoutY="50.0" prefHeight="362.0" prefWidth="643.0">
+               <content>
+                  <HBox prefHeight="45.0" prefWidth="634.0">
+                     <children>
+                        <VBox fx:id="messageArea" prefHeight="100.0" prefWidth="635.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+            <Label fx:id="txtClientName" layoutX="90.0" layoutY="14.0" text="Dreed">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="36.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
