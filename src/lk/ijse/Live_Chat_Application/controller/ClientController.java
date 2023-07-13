@@ -215,5 +215,70 @@ public class ClientController extends Thread {
     }
 
     public void sendEmojiOnAction(MouseEvent mouseEvent) {
+        if(mouseEvent.getSource() instanceof ImageView){
+            ImageView icon = (ImageView) mouseEvent.getSource();
+            switch (icon.getId()){
+
+                case "emoji1":
+                    byte[] byte1 = new byte[]{(byte) 0xE2,(byte) 0x9D,(byte) 0xA4};
+                    String emoji1AsString = new String(byte1,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji1AsString);
+                    break;
+
+                case "emoji2":
+                    byte [] byte2 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0x8D};
+                    String emoji2AsString = new String(byte2,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji2AsString);
+                    break;
+
+                case "emoji3":
+                    byte [] byte3 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0xA1};
+                    String emoji3AsString = new String(byte3,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji3AsString);
+                    break;
+
+                case "emoji4":
+                    byte [] byte4 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0xBB};
+                    String emoji4AsString = new String(byte4,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji4AsString);
+                    break;
+
+                case "emoji5":
+                    byte [] byte5 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0x82};
+                    String emoji5AsString = new String(byte5,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji5AsString);
+                    break;
+
+                case "emoji6":
+                    byte [] byte6 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0x98};
+                    String emoji6AsString = new String(byte6,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji6AsString);
+                    break;
+
+                case "emoji7":
+                    byte [] byte7 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0xB7};
+                    String emoji7AsString = new String(byte7,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji7AsString);
+                    break;
+
+                case "emoji8":
+                    byte [] byte8 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0x93};
+                    String emoji8AsString = new String(byte8,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji8AsString);
+                    break;
+
+                case "emoji9":
+                    byte [] byte9 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0xB3};
+                    String emoji9AsString = new String(byte9,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji9AsString);
+                    break;
+
+                case "emoji10":
+                    byte [] byte10 = new byte[]{(byte) 0xF0,(byte) 0x9F ,(byte) 0x98,(byte) 0xB1};
+                    String emoji10AsString = new String(byte10,StandardCharsets.UTF_8);
+                    txtMessage.appendText(emoji10AsString);
+                    break;
+            }
+        }
     }
 }
