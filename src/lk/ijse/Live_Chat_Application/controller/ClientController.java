@@ -50,29 +50,37 @@ public class ClientController extends Thread {
     private FileChooser fileChooser;
     private URL url;
 
+
+    // Initializes your chat application
     public void initialize(){
         this.txtClientName.setText(LoginController.clientName);
         connectSocket();
         emojiPane.setVisible(false);
     }
 
+    // Connects to the server
     private void connectSocket() {
         try {
 
-            socket = new Socket("localhost",3000);
+            socket = new Socket("localhost",3000); // Create a new Socket to connect to the server
 
             System.out.println("Connected to Server...!");
 
+            // Create a new BufferedReader to read messages from the server
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
 
+            // Create a new PrintWriter to send messages to the server
             printWriter = new PrintWriter(socket.getOutputStream(),true);
 
+            // Start this thread
             this.start();
 
         }catch (IOException e){
             e.printStackTrace();
         }
     }
+
+    // Continuously reads messages from the server and updates the chat box accordingly
     public void run(){
 
         try {
@@ -158,10 +166,13 @@ public class ClientController extends Thread {
         }
     }
 
+    // Sends the message in txtMessage to the server when triggered by an ActionEvent
     public void sendOnAction(ActionEvent actionEvent) {
         send();
         emojiPane.setVisible(false);
     }
+
+    // Sends the text in txtMessage to the server and updates the chat box accordingly
     private void send(){
         String msg = txtMessage.getText();
 
@@ -186,8 +197,14 @@ public class ClientController extends Thread {
             System.exit(0);
         }
     }
+
+    // Toggles the visibility of the emojiPane when triggered by a MouseEvent
     public void emojiOnAction(MouseEvent mouseEvent) {
+
+        // Toggle the visibility of the emoji pane
         emojiPane.setVisible(!emojiPane.isVisible());
+
+
     }
 
     // This method opens a file chooser and sends an image file selected by the user to the server
