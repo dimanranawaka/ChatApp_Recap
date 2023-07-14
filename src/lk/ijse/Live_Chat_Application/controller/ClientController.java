@@ -190,6 +190,8 @@ public class ClientController extends Thread {
         emojiPane.setVisible(!emojiPane.isVisible());
     }
 
+    // This method opens a file chooser and sends an image file selected by the user to the server
+
     public void openFileChoser(MouseEvent mouseEvent) throws MalformedURLException {
 
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
@@ -213,7 +215,7 @@ public class ClientController extends Thread {
             messageArea.getChildren().add(hBox);
         }
     }
-
+    // This method updates the txtMessage with the selected emoji when an emoji is clicked
     public void sendEmojiOnAction(MouseEvent mouseEvent) {
         if(mouseEvent.getSource() instanceof ImageView){
             ImageView icon = (ImageView) mouseEvent.getSource();
