@@ -172,7 +172,7 @@ public class ClientController extends Thread {
         emojiPane.setVisible(false);
     }
 
-    // Sends the text in txtMessage to the server and updates the chat box accordingly
+    // Sends the text in txtMessage to the server and updates the chat box  accordingly
     private void send(){
         String msg = txtMessage.getText();
 
