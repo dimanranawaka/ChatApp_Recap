@@ -217,7 +217,7 @@ public class ClientController extends Thread {
         File file = fileChooser.showOpenDialog(stage);
 
         if(file!=null){
-
+            printWriter.println(LoginController.clientName + " :" + file.toURI().toURL());
             printWriter.println("File Selected...");
             url = file.toURI().toURL();
             System.out.println(url);
